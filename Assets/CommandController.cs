@@ -30,6 +30,7 @@ public class CommandController : MonoBehaviour
         }
 
         commandInputField.ActivateInputField(); // Focus back to input field
+        commandInputField.text = string.Empty; // Clear input field after entering command
 
         if (!isProcessingCommands)
         {
@@ -89,17 +90,33 @@ public class CommandController : MonoBehaviour
 
     IEnumerator MoveSquare(Vector3 direction, int distance)
     {
+        if (square == null)
+        {
+            Debug.LogWarning("Square GameObject is null or has been destroyed.");
+            yield break;
+        }
+
         Vector3 startPosition = square.transform.position;
         Vector3 endPosition = startPosition + direction * distance;
+        float totalDuration = distance / moveSpeed;
         float elapsedTime = 0f;
 
-        while (elapsedTime < 1f)
+        while (elapsedTime < totalDuration)
         {
-            square.transform.position = Vector3.Lerp(startPosition, endPosition, elapsedTime);
-            elapsedTime += Time.deltaTime * moveSpeed;
+            if (square == null)
+            {
+                Debug.LogWarning("Square GameObject is null or has been destroyed during movement.");
+                yield break;
+            }
+
+            square.transform.position = Vector3.Lerp(startPosition, endPosition, elapsedTime / totalDuration);
+            elapsedTime += Time.deltaTime;
             yield return null;
         }
 
-        square.transform.position = endPosition; // Đảm bảo rằng đối tượng đạt được vị trí cuối cùng
+        if (square != null)
+        {
+            square.transform.position = endPosition; // Đảm bảo rằng đối tượng đạt được vị trí cuối cùng
+        }
     }
 }
