@@ -5,46 +5,55 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine.EventSystems;
+using UnityEngine.Tilemaps;
 
 public class CommandController : MonoBehaviour
 {
-    public InputField commandInputField;
-    public GameObject player;
-    private float moveSpeed = 1.0f; // Movement speed (units/second)
-    private Queue<string> commandQueue = new Queue<string>();
-    private bool isProcessingCommands = false;
-    private Animator animator;
-    public LayerMask solidObjectLayer;
- 
+    public InputField commandInputField; // Input field for entering commands
+    public GameObject player; // Reference to the player GameObject
+    [SerializeField] private float moveSpeed = 1.0f; // Movement speed (units/second)
+    private Queue<string> commandQueue = new Queue<string>(); // Queue to store commands
+    private bool isProcessingCommands = false; // Flag to indicate if commands are being processed
+    private Animator animator; // Animator component of the player
+    public LayerMask solidObjectLayer; // Layer mask for solid objects
+
+    private Rigidbody2D playerRigidbody; // Rigidbody2D component of the player
+
     void Start()
     {
         if (player != null)
         {
-            animator = player.GetComponent<Animator>();
+            animator = player.GetComponent<Animator>(); // Get Animator component from player
+            playerRigidbody = player.GetComponent<Rigidbody2D>(); // Get Rigidbody2D component from player
         }
 
-        commandInputField.onEndEdit.AddListener(OnCommandEntered);
+        commandInputField.onEndEdit.AddListener(OnCommandEntered); // Add listener for command input
     }
 
+    // Method called when a command is entered in the input field
     public void OnCommandEntered(string value)
     {
-        // Split the commands by new lines
-        string[] commands = value.Split(new[] { '\n' }, System.StringSplitOptions.RemoveEmptyEntries);
-
-        foreach (string command in commands)
+        if (!string.IsNullOrWhiteSpace(value))
         {
-            commandQueue.Enqueue(command.Trim()); // Add each command to the queue
-        }
+            // Split the commands by new lines
+            string[] commands = value.Split(new[] { '\n' }, System.StringSplitOptions.RemoveEmptyEntries);
 
-        commandInputField.ActivateInputField(); // Focus back to input field
-        commandInputField.text = string.Empty; // Clear input field after entering command
+            foreach (string command in commands)
+            {
+                commandQueue.Enqueue(command.Trim()); // Add each command to the queue
+            }
 
-        if (!isProcessingCommands)
-        {
-            StartCoroutine(ProcessCommands());
+            commandInputField.ActivateInputField(); // Focus back to input field
+            commandInputField.text = string.Empty; // Clear input field after entering command
+
+            if (!isProcessingCommands)
+            {
+                StartCoroutine(ProcessCommands()); // Start processing commands if not already doing so
+            }
         }
     }
 
+    // Coroutine to process commands sequentially
     IEnumerator ProcessCommands()
     {
         isProcessingCommands = true;
@@ -52,42 +61,30 @@ public class CommandController : MonoBehaviour
         while (commandQueue.Count > 0)
         {
             string command = commandQueue.Dequeue();
-            yield return StartCoroutine(ProcessCommand(command));
+            yield return StartCoroutine(ProcessCommand(command)); // Process each command
         }
 
         isProcessingCommands = false;
     }
 
+    // Coroutine to process an individual command
     IEnumerator ProcessCommand(string command)
     {
         // Extract the direction and distance from the command using regex
-        var match = Regex.Match(command, @"(\w+)\((\d+)\)");
+        var match = Regex.Match(command, @"(\w+)\((\d+(\.\d+)?)\)");
         if (match.Success)
         {
             string direction = match.Groups[1].Value.ToLower();
-            int distance = int.Parse(match.Groups[2].Value);
+            float distance = float.Parse(match.Groups[2].Value);
 
-            Vector3 moveDirection = Vector3.zero;
-            switch (direction)
+            Vector3 moveDirection = GetDirectionVector(direction); // Get the direction vector
+            if (moveDirection == Vector3.zero)
             {
-                case "up":
-                    moveDirection = Vector3.up;
-                    break;
-                case "down":
-                    moveDirection = Vector3.down;
-                    break;
-                case "left":
-                    moveDirection = Vector3.left;
-                    break;
-                case "right":
-                    moveDirection = Vector3.right;
-                    break;
-                default:
-                    Debug.Log("Unknown command: " + command);
-                    yield break;
+                Debug.Log("Unknown command: " + command);
+                yield break;
             }
 
-            yield return StartCoroutine(MovePlayer(moveDirection, distance));
+            yield return StartCoroutine(MovePlayer(moveDirection, distance)); // Move the player
         }
         else
         {
@@ -95,7 +92,21 @@ public class CommandController : MonoBehaviour
         }
     }
 
-    IEnumerator MovePlayer(Vector3 direction, int distance)
+    // Method to convert direction string to a Vector3
+    Vector3 GetDirectionVector(string direction)
+    {
+        switch (direction)
+        {
+            case "up": return Vector3.up;
+            case "down": return Vector3.down;
+            case "left": return Vector3.left;
+            case "right": return Vector3.right;
+            default: return Vector3.zero;
+        }
+    }
+
+    // Coroutine to move the player in a given direction for a given distance
+    IEnumerator MovePlayer(Vector3 direction, float distance)
     {
         if (player == null)
         {
@@ -116,7 +127,6 @@ public class CommandController : MonoBehaviour
             animator.SetFloat("moveY", direction.y);
         }
 
-        // Move the player to the target position
         while (elapsedTime < totalDuration)
         {
             if (player == null)
@@ -133,13 +143,11 @@ public class CommandController : MonoBehaviour
             if (!IsWalkable(currentPosition))
             {
                 Debug.LogWarning("Current position is not walkable: " + currentPosition);
-                // Move back one unit if the position is not walkable
-                player.transform.position -= direction;
-                break;
+                break; // Stop movement when hitting a solid object
             }
 
-            // Move the player to the current position
-            player.transform.position = currentPosition;
+            // Move the player to the current position using Rigidbody2D
+            playerRigidbody.MovePosition(currentPosition);
 
             elapsedTime += Time.deltaTime;
             yield return null;
@@ -149,73 +157,13 @@ public class CommandController : MonoBehaviour
         if (animator != null)
         {
             animator.SetBool("isMoving", false);
-            // Do not reset moveX and moveY to keep the direction
         }
     }
 
-    //IEnumerator MovePlayer(Vector3 direction, int distance)
-    //{
-    //    if (player == null)
-    //    {
-    //        Debug.LogWarning("Player GameObject is null or has been destroyed.");
-    //        yield break;
-    //    }
-
-    //    Vector3 startPosition = player.transform.position;
-    //    Vector3 endPosition = startPosition + direction * distance;
-    //    float totalDuration = distance / moveSpeed;
-    //    float elapsedTime = 0f;
-
-    //    // Set animator parameters to start the animation
-    //    if (animator != null)
-    //    {
-    //        animator.SetBool("isMoving", true);
-    //        animator.SetFloat("moveX", direction.x);
-    //        animator.SetFloat("moveY", direction.y);
-    //    }
-
-    //    while (elapsedTime < totalDuration)
-    //    {
-    //        if (player == null)
-    //        {
-    //            Debug.LogWarning("Player GameObject is null or has been destroyed during movement.");
-    //            yield break;
-    //        }
-
-    //        // Calculate the current position based on elapsed time
-    //        float t = elapsedTime / totalDuration;
-    //        Vector3 currentPosition = Vector3.Lerp(startPosition, endPosition, t);
-
-    //        // Check if the current position is walkable
-    //        if (!IsWalkable(currentPosition))
-    //        {
-
-    //            Debug.LogWarning("Current position is not walkable: " + currentPosition);
-    //            break;
-    //        }
-
-    //        // Move the player to the current position
-    //        player.transform.position = currentPosition;
-
-    //        elapsedTime += Time.deltaTime;
-    //        yield return null;
-    //    }
-
-    //    // Reset animator parameters after movement
-    //    if (animator != null)
-    //    {
-    //        animator.SetBool("isMoving", false);
-    //        // Do not reset moveX and moveY to keep the direction
-    //    }
-    //}
-
-    //set animator parameters to stop the animation
+    // Method to check if the target position is walkable
     private bool IsWalkable(Vector3 targetPos)
     {
-        if (Physics2D.OverlapCircle(targetPos, 0.2f, solidObjectLayer) != null)
-        {
-            return false;
-        }
-        return true;
+        return Physics2D.OverlapCircle(targetPos, 0.2f, solidObjectLayer) == null;
     }
+
 }
