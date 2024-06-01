@@ -16,8 +16,11 @@ public class CommandController : MonoBehaviour
     private bool isProcessingCommands = false; // Flag to indicate if commands are being processed
     private Animator animator; // Animator component of the player
     public LayerMask solidObjectLayer; // Layer mask for solid objects
+    public LayerMask outDoorLayer; // Layer mask for doors
 
     private Rigidbody2D playerRigidbody; // Rigidbody2D component of the player
+
+    private Vector3 startPoint; // Starting position of the player
 
     void Start()
     {
@@ -25,6 +28,7 @@ public class CommandController : MonoBehaviour
         {
             animator = player.GetComponent<Animator>(); // Get Animator component from player
             playerRigidbody = player.GetComponent<Rigidbody2D>(); // Get Rigidbody2D component from player
+            startPoint = player.transform.position; // Store the starting position of the player
         }
 
         commandInputField.onEndEdit.AddListener(OnCommandEntered); // Add listener for command input
@@ -44,7 +48,7 @@ public class CommandController : MonoBehaviour
             }
 
             commandInputField.ActivateInputField(); // Focus back to input field
-            commandInputField.text = string.Empty; // Clear input field after entering command
+            //commandInputField.text = string.Empty; // Clear input field after entering command
 
             if (!isProcessingCommands)
             {
@@ -146,6 +150,12 @@ public class CommandController : MonoBehaviour
                 break; // Stop movement when hitting a solid object
             }
 
+            // Check if the player meets the outdoor layer
+            if (IsOutDoor(currentPosition))
+            {
+                yield break; // Stop movement when meeting outdoor layer
+            }
+
             // Move the player to the current position using Rigidbody2D
             playerRigidbody.MovePosition(currentPosition);
 
@@ -166,4 +176,9 @@ public class CommandController : MonoBehaviour
         return Physics2D.OverlapCircle(targetPos, 0.2f, solidObjectLayer) == null;
     }
 
+    // Method to check if the target position meets an outdoor layer
+    private bool IsOutDoor(Vector3 targetPos)
+    {
+        return Physics2D.OverlapCircle(targetPos, 0.2f, outDoorLayer) != null;
+    }
 }
