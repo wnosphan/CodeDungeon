@@ -19,6 +19,7 @@ public class CommandController : MonoBehaviour
     public LayerMask outDoorLayer; // Layer mask for doors
 
     private Rigidbody2D playerRigidbody; // Rigidbody2D component of the player
+    private CapsuleCollider2D playerCapsuleCollider; // Collider component of the player
 
     private Vector3 startPoint; // Starting position of the player
 
@@ -28,6 +29,7 @@ public class CommandController : MonoBehaviour
         {
             animator = player.GetComponent<Animator>(); // Get Animator component from player
             playerRigidbody = player.GetComponent<Rigidbody2D>(); // Get Rigidbody2D component from player
+            playerCapsuleCollider = player.GetComponent<CapsuleCollider2D>(); // Get Collider component from player
             startPoint = player.transform.position; // Store the starting position of the player
         }
 
@@ -39,6 +41,9 @@ public class CommandController : MonoBehaviour
     {
         if (!string.IsNullOrWhiteSpace(value))
         {
+            // Reset player position to starting position
+            ResetPlayerPosition();
+
             // Split the commands by new lines
             string[] commands = value.Split(new[] { '\n' }, System.StringSplitOptions.RemoveEmptyEntries);
 
@@ -48,13 +53,18 @@ public class CommandController : MonoBehaviour
             }
 
             commandInputField.ActivateInputField(); // Focus back to input field
-            //commandInputField.text = string.Empty; // Clear input field after entering command
 
             if (!isProcessingCommands)
             {
                 StartCoroutine(ProcessCommands()); // Start processing commands if not already doing so
             }
         }
+    }
+
+    // Method to reset player position to starting position
+    private void ResetPlayerPosition()
+    {
+        player.transform.position = startPoint;
     }
 
     // Coroutine to process commands sequentially
@@ -169,17 +179,24 @@ public class CommandController : MonoBehaviour
             animator.SetBool("isMoving", false);
         }
     }
-
-    // Method to check if the target position is walkable
     private bool IsWalkable(Vector3 targetPos)
     {
-        
-        return Physics2D.OverlapCircle(targetPos, 0.2f, solidObjectLayer) == null;
+        // Use CapsuleCollider2D to check for collisions
+        Vector2 direction = (targetPos - player.transform.position).normalized;
+        float distance = Vector2.Distance(player.transform.position, targetPos);
+        RaycastHit2D hit = Physics2D.CapsuleCast(player.transform.position, playerCapsuleCollider.size, playerCapsuleCollider.direction, 0f, direction, distance, solidObjectLayer);
+
+        return hit.collider == null;
     }
 
     // Method to check if the target position meets an outdoor layer
     private bool IsOutDoor(Vector3 targetPos)
     {
-        return Physics2D.OverlapCircle(targetPos, 0.2f, outDoorLayer) != null;
+        // Use CapsuleCollider2D to check for collisions with outdoor layer
+        Vector2 direction = (targetPos - player.transform.position).normalized;
+        float distance = Vector2.Distance(player.transform.position, targetPos);
+        RaycastHit2D hit = Physics2D.CapsuleCast(player.transform.position, playerCapsuleCollider.size, playerCapsuleCollider.direction, 0f, direction, distance, outDoorLayer);
+
+        return hit.collider != null;
     }
 }
