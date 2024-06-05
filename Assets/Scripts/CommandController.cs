@@ -173,6 +173,7 @@ public class CommandController : MonoBehaviour
     // Method to check if the target position is walkable
     private bool IsWalkable(Vector3 targetPos)
     {
+        
         return Physics2D.OverlapCircle(targetPos, 0.2f, solidObjectLayer) == null;
     }
 
