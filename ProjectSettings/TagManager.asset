@@ -14,7 +14,7 @@ TagManager:
   - 
   - SolidObjects
   - OutDoor
-  - 
+  - Monsters
   - 
   - 
   - 
@@ -52,4 +52,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 4189426099
+    locked: 0
+  - name: Monster
+    uniqueID: 1372320013
     locked: 0
