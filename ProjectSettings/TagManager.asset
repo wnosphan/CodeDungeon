@@ -47,6 +47,9 @@ TagManager:
   - name: Foreground
     uniqueID: 4250941897
     locked: 0
+  - name: Decoration
+    uniqueID: 4204469481
+    locked: 0
   - name: Touch
     uniqueID: 3092202819
     locked: 0
