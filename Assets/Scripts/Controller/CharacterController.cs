@@ -1,27 +1,20 @@
-﻿using TMPro;
-using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using UnityEngine.EventSystems;
-using UnityEngine.Tilemaps;
+using UnityEngine;
 
-public class CommandController : MonoBehaviour
+public class CharacterController: MonoBehaviour
 {
-    public InputField commandInputField; // Input field for entering commands
     public GameObject player; // Reference to the player GameObject
-    [SerializeField] private float moveSpeed = 1.0f; // Movement speed (units/second)
+    public LayerMask solidObjectLayer; // Layer mask for solid objects
+    public LayerMask outDoorLayer; // Layer mask for doors
     private Queue<string> commandQueue = new Queue<string>(); // Queue to store commands
     private bool isProcessingCommands = false; // Flag to indicate if commands are being processed
     private Animator animator; // Animator component of the player
-    public LayerMask solidObjectLayer; // Layer mask for solid objects
-    public LayerMask outDoorLayer; // Layer mask for doors
-
     private Rigidbody2D playerRigidbody; // Rigidbody2D component of the player
     private CapsuleCollider2D playerCapsuleCollider; // Collider component of the player
-
     private Vector3 startPoint; // Starting position of the player
+    [SerializeField] private float moveSpeed = 1.0f; // Movement speed (units/second)
 
     void Start()
     {
@@ -32,43 +25,14 @@ public class CommandController : MonoBehaviour
             playerCapsuleCollider = player.GetComponent<CapsuleCollider2D>(); // Get Collider component from player
             startPoint = player.transform.position; // Store the starting position of the player
         }
-
-        commandInputField.onEndEdit.AddListener(OnCommandEntered); // Add listener for command input
     }
 
-    // Method called when a command is entered in the input field
-    public void OnCommandEntered(string value)
+    public void EnqueueCommand(string command)
     {
-        if (!string.IsNullOrWhiteSpace(value))
-        {
-            // Reset player position to starting position
-            ResetPlayerPosition();
-
-            // Split the commands by new lines
-            string[] commands = value.Split(new[] { '\n' }, System.StringSplitOptions.RemoveEmptyEntries);
-
-            foreach (string command in commands)
-            {
-                commandQueue.Enqueue(command.Trim()); // Add each command to the queue
-            }
-
-            commandInputField.ActivateInputField(); // Focus back to input field
-
-            if (!isProcessingCommands)
-            {
-                StartCoroutine(ProcessCommands()); // Start processing commands if not already doing so
-            }
-        }
+        commandQueue.Enqueue(command);
     }
 
-    // Method to reset player position to starting position
-    private void ResetPlayerPosition()
-    {
-        player.transform.position = startPoint;
-    }
-
-    // Coroutine to process commands sequentially
-    IEnumerator ProcessCommands()
+    public IEnumerator ProcessCommands()
     {
         isProcessingCommands = true;
 
@@ -81,8 +45,7 @@ public class CommandController : MonoBehaviour
         isProcessingCommands = false;
     }
 
-    // Coroutine to process an individual command
-    IEnumerator ProcessCommand(string command)
+    private IEnumerator ProcessCommand(string command)
     {
         // Extract the direction and distance from the command using regex
         var match = Regex.Match(command, @"(\w+)\((\d+(\.\d+)?)\)");
@@ -106,8 +69,7 @@ public class CommandController : MonoBehaviour
         }
     }
 
-    // Method to convert direction string to a Vector3
-    Vector3 GetDirectionVector(string direction)
+    private Vector3 GetDirectionVector(string direction)
     {
         switch (direction)
         {
@@ -119,8 +81,7 @@ public class CommandController : MonoBehaviour
         }
     }
 
-    // Coroutine to move the player in a given direction for a given distance
-    IEnumerator MovePlayer(Vector3 direction, float distance)
+    private IEnumerator MovePlayer(Vector3 direction, float distance)
     {
         if (player == null)
         {
@@ -179,6 +140,7 @@ public class CommandController : MonoBehaviour
             animator.SetBool("isMoving", false);
         }
     }
+
     private bool IsWalkable(Vector3 targetPos)
     {
         // Use CapsuleCollider2D to check for collisions
@@ -189,7 +151,6 @@ public class CommandController : MonoBehaviour
         return hit.collider == null;
     }
 
-    // Method to check if the target position meets an outdoor layer
     private bool IsOutDoor(Vector3 targetPos)
     {
         // Use CapsuleCollider2D to check for collisions with outdoor layer
@@ -198,5 +159,15 @@ public class CommandController : MonoBehaviour
         RaycastHit2D hit = Physics2D.CapsuleCast(player.transform.position, playerCapsuleCollider.size, playerCapsuleCollider.direction, 0f, direction, distance, outDoorLayer);
 
         return hit.collider != null;
+    }
+
+    public void ResetPlayerPosition()
+    {
+        player.transform.position = startPoint;
+    }
+
+    public bool IsProcessingCommands()
+    {
+        return isProcessingCommands;
     }
 }
