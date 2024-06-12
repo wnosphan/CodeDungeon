@@ -504,8 +504,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.34374997, y: 0.59374994}
+  m_Offset: {x: 0, y: -0.1516178}
+  m_Size: {x: 0.34374997, y: 0.3969848}
   m_Direction: 0
 --- !u!114 &177785405
 MonoBehaviour:
@@ -528,6 +528,7 @@ MonoBehaviour:
     m_Bits: 256
   moveSpeed: 6
   contactDistance: 0.3
+
 --- !u!114 &177785406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4661,7 +4662,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1111158660}
   - component: {fileID: 1111158661}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Silver_Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4824,6 +4825,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1194636074}
   - component: {fileID: 1194636075}
+
   m_Layer: 11
   m_Name: Gold_Box
   m_TagString: Untagged
@@ -5031,6 +5033,7 @@ GameObject:
   - component: {fileID: 1302427952}
   m_Layer: 0
   m_Name: Wall_Decoration
+
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11216,7 +11219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1689224039}
   - component: {fileID: 1689224038}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Final_Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
