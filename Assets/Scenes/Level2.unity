@@ -638,8 +638,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.34374997, y: 0.59374994}
+  m_Offset: {x: 0, y: -0.1516178}
+  m_Size: {x: 0.34374997, y: 0.3969848}
   m_Direction: 0
 --- !u!114 &177785405
 MonoBehaviour:
@@ -661,7 +661,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   moveSpeed: 6
-  contactDistance: 0.3
+  contactDistance: 0.6
+--- !u!114 &177785406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177785398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7f80c80c652df647a64a83565acf75f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTime: 0
 --- !u!1 &185557870
 GameObject:
   m_ObjectHideFlags: 0
@@ -4623,7 +4636,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1111158660}
   - component: {fileID: 1111158661}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Silver_Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4786,7 +4799,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1194636074}
   - component: {fileID: 1194636075}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Gold_Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10925,7 +10938,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1689224039}
   - component: {fileID: 1689224038}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Final_Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
