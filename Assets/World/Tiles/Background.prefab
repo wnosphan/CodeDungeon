@@ -87,6 +87,19 @@ Tilemap:
   m_GameObject: {fileID: 6159033091460893159}
   m_Enabled: 1
   m_Tiles:
+<<<<<<< HEAD
+=======
+  - first: {x: -1, y: -9, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 97
+      m_TileSpriteIndex: 97
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 1
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741827
+>>>>>>> d6c8d1f3f6570b26183111b0ce753f934371a4e4
   - first: {x: -2, y: -8, z: 0}
     second:
       serializedVersion: 2
@@ -1305,7 +1318,11 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: d86f2722360b74e449bd230ad930a971, type: 2}
   - m_RefCount: 1
+<<<<<<< HEAD
     m_Data: {fileID: 11400000, guid: dc3042cb655102e478e113f66ff85f10, type: 2}
+=======
+    m_Data: {fileID: 0}
+>>>>>>> d6c8d1f3f6570b26183111b0ce753f934371a4e4
   m_TileSpriteArray:
   - m_RefCount: 3
     m_Data: {fileID: 633875442, guid: 4a933f84c3e3c8a4c8f0b0cde14bf32e, type: 3}
@@ -1502,7 +1519,11 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 217517004, guid: 4a933f84c3e3c8a4c8f0b0cde14bf32e, type: 3}
   - m_RefCount: 1
+<<<<<<< HEAD
     m_Data: {fileID: 21300000, guid: 88abe2b8d1d173044bfeba9b0a26979b, type: 3}
+=======
+    m_Data: {fileID: 0}
+>>>>>>> d6c8d1f3f6570b26183111b0ce753f934371a4e4
   m_TileMatrixArray:
   - m_RefCount: 101
     m_Data:
@@ -1525,10 +1546,16 @@ Tilemap:
   m_TileColorArray:
   - m_RefCount: 101
     m_Data: {r: 1, g: 1, b: 1, a: 1}
+  - m_RefCount: 1
+    m_Data: {r: 0.9653919, g: 0.60193175, b: 0.6351408, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+<<<<<<< HEAD
   m_Origin: {x: -2, y: -8, z: 0}
+=======
+  m_Origin: {x: -2, y: -9, z: 0}
+>>>>>>> d6c8d1f3f6570b26183111b0ce753f934371a4e4
   m_Size: {x: 10, y: 11, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
@@ -1598,7 +1625,11 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+<<<<<<< HEAD
 --- !u!114 &3732381210921780761
+=======
+--- !u!114 &978140647855221370
+>>>>>>> d6c8d1f3f6570b26183111b0ce753f934371a4e4
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
