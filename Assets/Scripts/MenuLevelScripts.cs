@@ -10,6 +10,14 @@ public class MenuLevelScripts : MonoBehaviour
         SceneManager.LoadScene("Level1");
     }
 
+    public void Level11()
+    {
+        SceneManager.LoadScene("Level1.1");
+    }
+    public void Level12()
+    {
+        SceneManager.LoadScene("Level1.2");
+    }
     public void Level2()
     {
         SceneManager.LoadScene("Level2");
