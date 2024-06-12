@@ -1279,7 +1279,7 @@ Transform:
   m_GameObject: {fileID: 645690107}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.11, y: -2.1406467, z: 0.022482945}
+  m_LocalPosition: {x: -10.82, y: -0.07, z: 0.022482945}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1384,7 +1384,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1406,11 +1406,15 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 80f8c23566a5cd645a6ea161f2d49e37, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 0170fd335e63c3e468673601aaa10790, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: -481253734, guid: 4a933f84c3e3c8a4c8f0b0cde14bf32e, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 658810101, guid: 4a933f84c3e3c8a4c8f0b0cde14bf32e, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -481253734, guid: 4a933f84c3e3c8a4c8f0b0cde14bf32e, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 2
     m_Data:
@@ -1437,7 +1441,7 @@ Tilemap:
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -1, y: 0, z: 0}
-  m_Size: {x: 2, y: 1, z: 1}
+  m_Size: {x: 14, y: 2, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -2129,9 +2133,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.034053907}
-  m_Size: {x: 0.55564207, y: 0.8737488}
-  m_Direction: 0
+  m_Offset: {x: -0.004656232, y: -0.19776309}
+  m_Size: {x: 0.47184068, y: 0.34148154}
+  m_Direction: 1
 --- !u!50 &1054107278
 Rigidbody2D:
   serializedVersion: 4
@@ -2280,6 +2284,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   moveSpeed: 6
+  contactDistance: 0.6
 --- !u!1 &1142084711
 GameObject:
   m_ObjectHideFlags: 0
@@ -21872,7 +21877,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 13
+  orthographic size: 12.3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
