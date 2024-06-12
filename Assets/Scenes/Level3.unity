@@ -2278,7 +2278,7 @@ MonoBehaviour:
     m_Bits: 128
   outDoorLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   moveSpeed: 6
 --- !u!1 &1142084711
 GameObject:
