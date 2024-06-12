@@ -2025,6 +2025,7 @@ GameObject:
   - component: {fileID: 1054107279}
   - component: {fileID: 1054107278}
   - component: {fileID: 1054107277}
+  - component: {fileID: 1054107283}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Untagged
@@ -2107,14 +2108,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   commandInputField: {fileID: 1850880584}
-  player: {fileID: 1054107276}
-  moveSpeed: 6
-  solidObjectLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  outDoorLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!95 &1054107280
 Animator:
   serializedVersion: 5
@@ -2203,6 +2196,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 645690108}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1054107283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054107276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6064453110e1f1645b08e3b6b40be11e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1054107276}
+  solidObjectLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  outDoorLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  moveSpeed: 6
 --- !u!1 &1142084711
 GameObject:
   m_ObjectHideFlags: 0

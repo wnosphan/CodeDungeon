@@ -397,6 +397,7 @@ GameObject:
   - component: {fileID: 177785402}
   - component: {fileID: 177785403}
   - component: {fileID: 177785404}
+  - component: {fileID: 177785405}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Untagged
@@ -505,14 +506,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   commandInputField: {fileID: 1989677273}
-  player: {fileID: 177785398}
-  moveSpeed: 6
-  solidObjectLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  outDoorLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!50 &177785403
 Rigidbody2D:
   serializedVersion: 4
@@ -572,9 +565,30 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.34374997, y: 0.59374994}
-  m_Direction: 0
+  m_Offset: {x: 0.0031777525, y: -0.16526915}
+  m_Size: {x: 0.56196815, y: 0.39034587}
+  m_Direction: 1
+--- !u!114 &177785405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177785398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6064453110e1f1645b08e3b6b40be11e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 177785398}
+  solidObjectLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  outDoorLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  moveSpeed: 6
+  contactDistance: 0.3
 --- !u!1 &185557870
 GameObject:
   m_ObjectHideFlags: 0

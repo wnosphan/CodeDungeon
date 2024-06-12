@@ -15,6 +15,7 @@ public class CharacterController: MonoBehaviour
     private CapsuleCollider2D playerCapsuleCollider; // Collider component of the player
     private Vector3 startPoint; // Starting position of the player
     [SerializeField] private float moveSpeed = 1.0f; // Movement speed (units/second)
+    [SerializeField] private float contactDistance = 0.1f; // Distance to check for collisions
 
     void Start()
     {
@@ -141,11 +142,31 @@ public class CharacterController: MonoBehaviour
         }
     }
 
+    //private bool IsWalkable(Vector3 targetPos)
+    //{
+    //    // Use CapsuleCollider2D to check for collisions
+    //    Vector2 direction = (targetPos - player.transform.position).normalized;
+    //    float distance = Vector2.Distance(player.transform.position, targetPos);
+    //    RaycastHit2D hit = Physics2D.CapsuleCast(player.transform.position, playerCapsuleCollider.size, playerCapsuleCollider.direction, 0f, direction, distance, solidObjectLayer);
+
+    //    return hit.collider == null;
+    //}
+
+    //private bool IsOutDoor(Vector3 targetPos)
+    //{
+    //    // Use CapsuleCollider2D to check for collisions with outdoor layer
+    //    Vector2 direction = (targetPos - player.transform.position).normalized;
+    //    float distance = Vector2.Distance(player.transform.position, targetPos);
+    //    RaycastHit2D hit = Physics2D.CapsuleCast(player.transform.position, playerCapsuleCollider.size, playerCapsuleCollider.direction, 0f, direction, distance, outDoorLayer);
+
+    //    return hit.collider != null;
+    //}
+
     private bool IsWalkable(Vector3 targetPos)
     {
         // Use CapsuleCollider2D to check for collisions
         Vector2 direction = (targetPos - player.transform.position).normalized;
-        float distance = Vector2.Distance(player.transform.position, targetPos);
+        float distance = Vector2.Distance(player.transform.position, targetPos) + contactDistance;
         RaycastHit2D hit = Physics2D.CapsuleCast(player.transform.position, playerCapsuleCollider.size, playerCapsuleCollider.direction, 0f, direction, distance, solidObjectLayer);
 
         return hit.collider == null;
@@ -155,7 +176,7 @@ public class CharacterController: MonoBehaviour
     {
         // Use CapsuleCollider2D to check for collisions with outdoor layer
         Vector2 direction = (targetPos - player.transform.position).normalized;
-        float distance = Vector2.Distance(player.transform.position, targetPos);
+        float distance = Vector2.Distance(player.transform.position, targetPos) + contactDistance;
         RaycastHit2D hit = Physics2D.CapsuleCast(player.transform.position, playerCapsuleCollider.size, playerCapsuleCollider.direction, 0f, direction, distance, outDoorLayer);
 
         return hit.collider != null;
