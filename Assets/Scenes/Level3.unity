@@ -134,9 +134,10 @@ GameObject:
   - component: {fileID: 10024639}
   - component: {fileID: 10024641}
   - component: {fileID: 10024640}
+  - component: {fileID: 10024642}
   m_Layer: 0
   m_Name: Coin (8)
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -229,6 +230,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &10024642
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10024638}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &86966144
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +365,7 @@ Transform:
   m_GameObject: {fileID: 86966144}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.72, y: 2.68, z: 0.011955738}
+  m_LocalPosition: {x: -0.44, y: 4.79, z: 0.011955738}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -365,9 +401,10 @@ GameObject:
   - component: {fileID: 160018540}
   - component: {fileID: 160018542}
   - component: {fileID: 160018541}
+  - component: {fileID: 160018543}
   m_Layer: 0
   m_Name: Coin (15)
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -460,6 +497,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &160018543
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160018539}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &263408356
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,9 +1121,10 @@ GameObject:
   - component: {fileID: 348463207}
   - component: {fileID: 348463209}
   - component: {fileID: 348463208}
+  - component: {fileID: 348463210}
   m_Layer: 0
   m_Name: Coin (3)
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1144,6 +1217,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &348463210
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348463206}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &392230285
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,9 +1410,10 @@ GameObject:
   - component: {fileID: 422872152}
   - component: {fileID: 422872154}
   - component: {fileID: 422872153}
+  - component: {fileID: 422872155}
   m_Layer: 0
   m_Name: Coin (1)
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1397,6 +1506,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &422872155
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422872151}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &522757840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1408,9 +1552,10 @@ GameObject:
   - component: {fileID: 522757841}
   - component: {fileID: 522757843}
   - component: {fileID: 522757842}
+  - component: {fileID: 522757844}
   m_Layer: 0
   m_Name: Coin (18)
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1503,6 +1648,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &522757844
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522757840}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &582162835
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,9 +1694,10 @@ GameObject:
   - component: {fileID: 582162836}
   - component: {fileID: 582162838}
   - component: {fileID: 582162837}
+  - component: {fileID: 582162839}
   m_Layer: 0
   m_Name: Coin (14)
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1609,6 +1790,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &582162839
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582162835}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &617878150
 GameObject:
   m_ObjectHideFlags: 0
@@ -1733,6 +1949,9 @@ GameObject:
   - component: {fileID: 687130323}
   - component: {fileID: 687130325}
   - component: {fileID: 687130324}
+  - component: {fileID: 687130328}
+  - component: {fileID: 687130327}
+  - component: {fileID: 687130326}
   m_Layer: 7
   m_Name: Gate
   m_TagString: Untagged
@@ -1894,6 +2113,112 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!66 &687130326
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687130322}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths: []
+  m_CompositePaths:
+    m_Paths: []
+  m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.00005
+  m_UseDelaunayMesh: 0
+  m_CompositeGameObject: {fileID: 687130322}
+--- !u!50 &687130327
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687130322}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
+--- !u!19719996 &687130328
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687130322}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &716036410
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,9 +2230,10 @@ GameObject:
   - component: {fileID: 716036411}
   - component: {fileID: 716036413}
   - component: {fileID: 716036412}
+  - component: {fileID: 716036414}
   m_Layer: 0
   m_Name: Coin (5)
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2000,6 +2326,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &716036414
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716036410}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &783849218
 GameObject:
   m_ObjectHideFlags: 0
@@ -2011,9 +2372,10 @@ GameObject:
   - component: {fileID: 783849219}
   - component: {fileID: 783849221}
   - component: {fileID: 783849220}
+  - component: {fileID: 783849222}
   m_Layer: 0
   m_Name: Coin (11)
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2106,6 +2468,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &783849222
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783849218}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &860637200
 GameObject:
   m_ObjectHideFlags: 0
@@ -2117,9 +2514,10 @@ GameObject:
   - component: {fileID: 860637201}
   - component: {fileID: 860637203}
   - component: {fileID: 860637202}
+  - component: {fileID: 860637204}
   m_Layer: 0
   m_Name: Coin (16)
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2212,6 +2610,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &860637204
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860637200}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &870275312
 GameObject:
   m_ObjectHideFlags: 0
@@ -2223,9 +2656,10 @@ GameObject:
   - component: {fileID: 870275313}
   - component: {fileID: 870275315}
   - component: {fileID: 870275314}
+  - component: {fileID: 870275316}
   m_Layer: 0
   m_Name: Coin (6)
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2318,6 +2752,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &870275316
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870275312}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &872961303
 GameObject:
   m_ObjectHideFlags: 0
@@ -2531,6 +3000,7 @@ GameObject:
   - component: {fileID: 1054107278}
   - component: {fileID: 1054107277}
   - component: {fileID: 1054107283}
+  - component: {fileID: 1054107284}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Untagged
@@ -2570,8 +3040,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.004656232, y: -0.19776309}
-  m_Size: {x: 0.47184068, y: 0.34148154}
+  m_Offset: {x: -0.0046562334, y: -0.2096357}
+  m_Size: {x: 0.4718408, y: 0.31773648}
   m_Direction: 1
 --- !u!50 &1054107278
 Rigidbody2D:
@@ -2695,7 +3165,7 @@ Transform:
   m_GameObject: {fileID: 1054107276}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.47, y: 4.2006464, z: -0.022482945}
+  m_LocalPosition: {x: -12.47, y: 2.19, z: -0.022482945}
   m_LocalScale: {x: 2.2605999, y: 2.2605999, z: 2.2605999}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2721,8 +3191,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   moveSpeed: 6
-  contactDistance: 0.1
-
+  contactDistance: 0.6
+--- !u!114 &1054107284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054107276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7f80c80c652df647a64a83565acf75f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTime: 0
 --- !u!1 &1142084711
 GameObject:
   m_ObjectHideFlags: 0
@@ -2852,9 +3334,10 @@ GameObject:
   - component: {fileID: 1405983149}
   - component: {fileID: 1405983151}
   - component: {fileID: 1405983150}
+  - component: {fileID: 1405983152}
   m_Layer: 0
   m_Name: Coin (13)
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2947,6 +3430,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &1405983152
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405983148}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1439274061
 GameObject:
   m_ObjectHideFlags: 0
@@ -2958,9 +3476,10 @@ GameObject:
   - component: {fileID: 1439274062}
   - component: {fileID: 1439274064}
   - component: {fileID: 1439274063}
+  - component: {fileID: 1439274065}
   m_Layer: 0
   m_Name: Coin (9)
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3053,6 +3572,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &1439274065
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439274061}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1492271852
 GameObject:
   m_ObjectHideFlags: 0
@@ -3113,9 +3667,10 @@ GameObject:
   - component: {fileID: 1570038487}
   - component: {fileID: 1570038489}
   - component: {fileID: 1570038488}
+  - component: {fileID: 1570038490}
   m_Layer: 0
   m_Name: Coin (2)
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3208,6 +3763,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &1570038490
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570038486}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1636503356
 GameObject:
   m_ObjectHideFlags: 0
@@ -3219,9 +3809,10 @@ GameObject:
   - component: {fileID: 1636503357}
   - component: {fileID: 1636503359}
   - component: {fileID: 1636503358}
+  - component: {fileID: 1636503360}
   m_Layer: 0
   m_Name: Coin
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3314,6 +3905,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &1636503360
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636503356}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1651486417
 GameObject:
   m_ObjectHideFlags: 0
@@ -4598,86 +5224,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -9, y: -4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 17
-      m_TileSpriteIndex: 17
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -8, y: -4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 11
-      m_TileSpriteIndex: 11
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -4, y: -4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 17
-      m_TileSpriteIndex: 17
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -3, y: -4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 11
-      m_TileSpriteIndex: 11
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 2, y: -4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 17
-      m_TileSpriteIndex: 17
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 3, y: -4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 11
-      m_TileSpriteIndex: 11
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 7, y: -4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 17
-      m_TileSpriteIndex: 17
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 8, y: -4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 11
-      m_TileSpriteIndex: 11
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 16, y: -4, z: 0}
     second:
       serializedVersion: 2
@@ -4713,86 +5259,6 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 5
       m_TileSpriteIndex: 5
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -9, y: -2, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 7
-      m_TileSpriteIndex: 7
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -8, y: -2, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 7
-      m_TileSpriteIndex: 7
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -4, y: -2, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 7
-      m_TileSpriteIndex: 7
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -3, y: -2, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 7
-      m_TileSpriteIndex: 7
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 2, y: -2, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 7
-      m_TileSpriteIndex: 7
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 3, y: -2, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 7
-      m_TileSpriteIndex: 7
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 7, y: -2, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 7
-      m_TileSpriteIndex: 7
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 8, y: -2, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 7
-      m_TileSpriteIndex: 7
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -5324,7 +5790,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: d188927271a24834398b75463dfc8578, type: 2}
   - m_RefCount: 12
     m_Data: {fileID: 11400000, guid: 08781d0bebec365499d68bb7aa15c504, type: 2}
-  - m_RefCount: 14
+  - m_RefCount: 6
     m_Data: {fileID: 11400000, guid: f1dca8cc40bb844418ae13fc4c0b6c9e, type: 2}
   - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: 42d5dff86f2c6ec4d9523381b2ab2c85, type: 2}
@@ -5332,7 +5798,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 3108b046b748c25489e20dabe0bf33f2, type: 2}
   - m_RefCount: 12
     m_Data: {fileID: 11400000, guid: 487ae551c8644d54589d476f30405eff, type: 2}
-  - m_RefCount: 13
+  - m_RefCount: 9
     m_Data: {fileID: 11400000, guid: 73c2e8db2e2af274eb967814e2457877, type: 2}
   - m_RefCount: 13
     m_Data: {fileID: 11400000, guid: e46821f63a142aa41a2703dd1f782ae1, type: 2}
@@ -5344,7 +5810,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 4d4179d1513e29544917d399b209e1fd, type: 2}
   - m_RefCount: 11
     m_Data: {fileID: 11400000, guid: d86148bb3ba2a9647b5537602a936c23, type: 2}
-  - m_RefCount: 11
+  - m_RefCount: 7
     m_Data: {fileID: 11400000, guid: 599c59656247c2a4b8aa64dae5973430, type: 2}
   - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: 1d778909611cad5479dc1e1cb917102a, type: 2}
@@ -5369,7 +5835,7 @@ Tilemap:
     m_Data: {fileID: 1131296720, guid: 4a933f84c3e3c8a4c8f0b0cde14bf32e, type: 3}
   - m_RefCount: 12
     m_Data: {fileID: 1911352076, guid: 4a933f84c3e3c8a4c8f0b0cde14bf32e, type: 3}
-  - m_RefCount: 14
+  - m_RefCount: 6
     m_Data: {fileID: 856504192, guid: 4a933f84c3e3c8a4c8f0b0cde14bf32e, type: 3}
   - m_RefCount: 5
     m_Data: {fileID: -1025036341, guid: 4a933f84c3e3c8a4c8f0b0cde14bf32e, type: 3}
@@ -5377,7 +5843,7 @@ Tilemap:
     m_Data: {fileID: -1831984312, guid: 4a933f84c3e3c8a4c8f0b0cde14bf32e, type: 3}
   - m_RefCount: 12
     m_Data: {fileID: -676051194, guid: 4a933f84c3e3c8a4c8f0b0cde14bf32e, type: 3}
-  - m_RefCount: 13
+  - m_RefCount: 9
     m_Data: {fileID: 208974506, guid: 4a933f84c3e3c8a4c8f0b0cde14bf32e, type: 3}
   - m_RefCount: 13
     m_Data: {fileID: -192939974, guid: 4a933f84c3e3c8a4c8f0b0cde14bf32e, type: 3}
@@ -5389,7 +5855,7 @@ Tilemap:
     m_Data: {fileID: 1999574305, guid: 4a933f84c3e3c8a4c8f0b0cde14bf32e, type: 3}
   - m_RefCount: 11
     m_Data: {fileID: -1082125574, guid: 4a933f84c3e3c8a4c8f0b0cde14bf32e, type: 3}
-  - m_RefCount: 11
+  - m_RefCount: 7
     m_Data: {fileID: 1153997527, guid: 4a933f84c3e3c8a4c8f0b0cde14bf32e, type: 3}
   - m_RefCount: 5
     m_Data: {fileID: 1519783967, guid: 4a933f84c3e3c8a4c8f0b0cde14bf32e, type: 3}
@@ -5400,7 +5866,7 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: 59043807, guid: 4a933f84c3e3c8a4c8f0b0cde14bf32e, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 190
+  - m_RefCount: 174
     m_Data:
       e00: 1
       e01: 0
@@ -5419,7 +5885,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 190
+  - m_RefCount: 174
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -5632,20 +6098,8 @@ CompositeCollider2D:
         Y: 0
       - X: -100000000
         Y: -10000000
-      - X: -90000000
-        Y: -10000000
-      - X: -90000000
-        Y: -20000000
-      - X: -70000000
-        Y: -20000000
-      - X: -70000000
-        Y: -10000000
-      - X: -40000000
-        Y: -10000000
-      - X: -40000000
-        Y: -20000000
       - X: -20000000
-        Y: -20000000
+        Y: -10000000
       - X: -20000000
         Y: 0
       - X: -10000000
@@ -5659,18 +6113,6 @@ CompositeCollider2D:
       - X: 20000000
         Y: 0
       - X: 20000000
-        Y: -20000000
-      - X: 40000000
-        Y: -20000000
-      - X: 40000000
-        Y: -10000000
-      - X: 70000000
-        Y: -10000000
-      - X: 70000000
-        Y: -20000000
-      - X: 90000000
-        Y: -20000000
-      - X: 90000000
         Y: -10000000
       - X: 100000000
         Y: -10000000
@@ -5725,18 +6167,6 @@ CompositeCollider2D:
       - X: -20000000
         Y: -50000000
       - X: -20000000
-        Y: -30000000
-      - X: -40000000
-        Y: -30000000
-      - X: -40000000
-        Y: -40000000
-      - X: -70000000
-        Y: -40000000
-      - X: -70000000
-        Y: -30000000
-      - X: -90000000
-        Y: -30000000
-      - X: -90000000
         Y: -40000000
       - X: -100000000
         Y: -40000000
@@ -5766,20 +6196,8 @@ CompositeCollider2D:
         Y: -50000000
       - X: 100000000
         Y: -40000000
-      - X: 90000000
-        Y: -40000000
-      - X: 90000000
-        Y: -30000000
-      - X: 70000000
-        Y: -30000000
-      - X: 70000000
-        Y: -40000000
-      - X: 40000000
-        Y: -40000000
-      - X: 40000000
-        Y: -30000000
       - X: 20000000
-        Y: -30000000
+        Y: -40000000
       - X: 20000000
         Y: -50000000
       - X: 10000000
@@ -5913,26 +6331,14 @@ CompositeCollider2D:
       - {x: -10.99997, y: 0}
       - {x: -10, y: -0.0000294}
       - {x: -9.99997, y: -1}
-      - {x: -9, y: -1.0000294}
-      - {x: -8.99997, y: -2}
-      - {x: -7, y: -1.9999708}
-      - {x: -6.9999704, y: -1}
-      - {x: -4, y: -1.0000294}
-      - {x: -3.999971, y: -2}
-      - {x: -2, y: -1.9999708}
+      - {x: -2, y: -0.99997073}
       - {x: -1.9999707, y: 0}
       - {x: -1, y: 0.000029300001}
       - {x: -0.9999706, y: 3}
       - {x: 1, y: 2.9999707}
       - {x: 1.0000293, y: 0}
       - {x: 2, y: -0.0000294}
-      - {x: 2.0000293, y: -2}
-      - {x: 4, y: -1.9999708}
-      - {x: 4.0000296, y: -1}
-      - {x: 7, y: -1.0000294}
-      - {x: 7.0000296, y: -2}
-      - {x: 9, y: -1.9999708}
-      - {x: 9.00003, y: -1}
+      - {x: 2.0000293, y: -1}
       - {x: 10, y: -0.99997073}
       - {x: 10.00003, y: 0}
       - {x: 11, y: 0.000029300001}
@@ -5950,6 +6356,22 @@ CompositeCollider2D:
       - {x: 13, y: -6.000029}
       - {x: 12.99997, y: -10}
       - {x: 6, y: -10.00003}
+    - - {x: 4.999971, y: -12}
+      - {x: 5.0000296, y: -9}
+      - {x: 12, y: -8.99997}
+      - {x: 11.99997, y: -6}
+      - {x: 11, y: -5.9999704}
+      - {x: 10.99997, y: -5}
+      - {x: 10, y: -4.9999704}
+      - {x: 9.99997, y: -4}
+      - {x: 2, y: -4.000029}
+      - {x: 1.9999707, y: -5}
+      - {x: 1, y: -5.000029}
+      - {x: 1.0000293, y: -7}
+      - {x: 2, y: -7.0000296}
+      - {x: 1.9999707, y: -11}
+      - {x: 1, y: -11.00003}
+      - {x: 1.0000293, y: -12}
     - - {x: -10.00003, y: -8}
       - {x: -9.99997, y: -7}
       - {x: -6, y: -7.0000296}
@@ -5959,41 +6381,13 @@ CompositeCollider2D:
       - {x: -1, y: -6.9999704}
       - {x: -1.0000293, y: -5}
       - {x: -2, y: -4.9999704}
-      - {x: -2.0000293, y: -3}
-      - {x: -4, y: -3.0000293}
-      - {x: -4.0000296, y: -4}
-      - {x: -7, y: -3.9999704}
-      - {x: -7.0000296, y: -3}
-      - {x: -9, y: -3.0000293}
-      - {x: -9.00003, y: -4}
+      - {x: -2.0000293, y: -4}
       - {x: -10, y: -4.000029}
       - {x: -10.00003, y: -5}
       - {x: -11, y: -5.000029}
       - {x: -11.00003, y: -6}
       - {x: -12, y: -6.000029}
       - {x: -11.99997, y: -8}
-    - - {x: 4.999971, y: -12}
-      - {x: 5.0000296, y: -9}
-      - {x: 12, y: -8.99997}
-      - {x: 11.99997, y: -6}
-      - {x: 11, y: -5.9999704}
-      - {x: 10.99997, y: -5}
-      - {x: 10, y: -4.9999704}
-      - {x: 9.99997, y: -4}
-      - {x: 9, y: -3.9999704}
-      - {x: 8.99997, y: -3}
-      - {x: 7, y: -3.0000293}
-      - {x: 6.9999704, y: -4}
-      - {x: 4, y: -3.9999704}
-      - {x: 3.999971, y: -3}
-      - {x: 2, y: -3.0000293}
-      - {x: 1.9999707, y: -5}
-      - {x: 1, y: -5.000029}
-      - {x: 1.0000293, y: -7}
-      - {x: 2, y: -7.0000296}
-      - {x: 1.9999707, y: -11}
-      - {x: 1, y: -11.00003}
-      - {x: 1.0000293, y: -12}
     - - {x: 4, y: -10.99997}
       - {x: 3, y: -10.99997}
       - {x: 3.0000293, y: -5}
@@ -6092,9 +6486,10 @@ GameObject:
   - component: {fileID: 1683561385}
   - component: {fileID: 1683561387}
   - component: {fileID: 1683561386}
+  - component: {fileID: 1683561388}
   m_Layer: 0
   m_Name: Coin (17)
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6187,6 +6582,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &1683561388
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683561384}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1777881803
 GameObject:
   m_ObjectHideFlags: 0
@@ -6279,9 +6709,10 @@ GameObject:
   - component: {fileID: 1785884969}
   - component: {fileID: 1785884971}
   - component: {fileID: 1785884970}
+  - component: {fileID: 1785884972}
   m_Layer: 0
   m_Name: Coin (7)
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6374,6 +6805,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &1785884972
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785884968}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1786146902
 GameObject:
   m_ObjectHideFlags: 0
@@ -6385,9 +6851,10 @@ GameObject:
   - component: {fileID: 1786146903}
   - component: {fileID: 1786146905}
   - component: {fileID: 1786146904}
+  - component: {fileID: 1786146906}
   m_Layer: 0
   m_Name: Coin (10)
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6480,6 +6947,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &1786146906
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786146902}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1833428951
 GameObject:
   m_ObjectHideFlags: 0
@@ -6491,9 +6993,10 @@ GameObject:
   - component: {fileID: 1833428952}
   - component: {fileID: 1833428954}
   - component: {fileID: 1833428953}
+  - component: {fileID: 1833428955}
   m_Layer: 0
   m_Name: Coin (4)
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6586,6 +7089,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &1833428955
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833428951}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1850880582
 GameObject:
   m_ObjectHideFlags: 0
@@ -13708,8 +14246,8 @@ Tilemap:
   - first: {x: -8, y: -4, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -13748,8 +14286,8 @@ Tilemap:
   - first: {x: -4, y: -4, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -13808,8 +14346,8 @@ Tilemap:
   - first: {x: 2, y: -4, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -13868,8 +14406,8 @@ Tilemap:
   - first: {x: 8, y: -4, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -14808,8 +15346,8 @@ Tilemap:
   - first: {x: -8, y: -2, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -14848,8 +15386,8 @@ Tilemap:
   - first: {x: -4, y: -2, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -14908,8 +15446,8 @@ Tilemap:
   - first: {x: 2, y: -2, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -14968,8 +15506,8 @@ Tilemap:
   - first: {x: 8, y: -2, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -22867,7 +23405,7 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 1446
+  - m_RefCount: 1438
     m_Data: {fileID: 11400000, guid: e0eeff6bacabee644b7f53554d1968b2, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: d722b6d34fff2594386a69b4281a410a, type: 2}
@@ -22875,10 +23413,10 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 55b110ccd04292b449d8882e463cbac6, type: 2}
   - m_RefCount: 73
     m_Data: {fileID: 11400000, guid: fd050d90d2a58bf4eb0ad7a670189ded, type: 2}
-  - m_RefCount: 10
+  - m_RefCount: 18
     m_Data: {fileID: 11400000, guid: c3ce9901d22afb14c856171a0fac7982, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 1446
+  - m_RefCount: 1438
     m_Data: {fileID: 1467320859, guid: 4a933f84c3e3c8a4c8f0b0cde14bf32e, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1235609945, guid: 4a933f84c3e3c8a4c8f0b0cde14bf32e, type: 3}
@@ -22886,7 +23424,7 @@ Tilemap:
     m_Data: {fileID: -887032484, guid: 4a933f84c3e3c8a4c8f0b0cde14bf32e, type: 3}
   - m_RefCount: 73
     m_Data: {fileID: 927048503, guid: 4a933f84c3e3c8a4c8f0b0cde14bf32e, type: 3}
-  - m_RefCount: 10
+  - m_RefCount: 18
     m_Data: {fileID: -235683128, guid: 4a933f84c3e3c8a4c8f0b0cde14bf32e, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 1540
@@ -23037,9 +23575,10 @@ GameObject:
   - component: {fileID: 2145737767}
   - component: {fileID: 2145737769}
   - component: {fileID: 2145737768}
+  - component: {fileID: 2145737770}
   m_Layer: 0
   m_Name: Coin (12)
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23132,6 +23671,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &2145737770
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145737766}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
