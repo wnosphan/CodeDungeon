@@ -9822,7 +9822,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 254253705}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &250446332
 Animator:
@@ -9858,6 +9858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   commandInputField: {fileID: 259920213}
+  runButton: {fileID: 1790749324}
 --- !u!70 &250446334
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -10479,7 +10480,7 @@ Transform:
   - {fileID: 26573224}
   - {fileID: 418258934}
   - {fileID: 87201517}
-  m_Father: {fileID: 254253705}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &981463646
 GameObject:
@@ -11099,4 +11100,5 @@ SceneRoots:
   - {fileID: 12765894}
   - {fileID: 1670459772}
   - {fileID: 1577443656}
-  - {fileID: 254253705}
+  - {fileID: 250446330}
+  - {fileID: 895404868}
