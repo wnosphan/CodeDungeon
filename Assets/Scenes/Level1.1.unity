@@ -1233,7 +1233,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &789450523
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1907,11 +1907,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71a84aa56adcdae47b8674a22b0a6132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commandInputField: {fileID: 789450524}
+  commandInputField: {fileID: 1850880584}
   runButton: {fileID: 414427383}
-  suggestionPrefab: {fileID: 0}
-  suggestionsParent: {fileID: 617878151}
-  maxSuggestions: 5
 --- !u!95 &1054107280
 Animator:
   serializedVersion: 5
@@ -5585,7 +5582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1850880583
 RectTransform:
   m_ObjectHideFlags: 0
