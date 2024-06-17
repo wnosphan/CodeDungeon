@@ -125,7 +125,8 @@ public class CharacterController: MonoBehaviour
             // Check if the player meets the outdoor layer
             if (IsOutDoor(currentPosition))
             {
-                yield break; // Stop movement when meeting outdoor layer
+                Debug.LogWarning("Current position is Door: " + currentPosition);
+                break; // Stop movement when meeting outdoor layer
             }
 
             // Move the player to the current position using Rigidbody2D
