@@ -11,7 +11,7 @@ public class CollectCoin : MonoBehaviour
         UpdateScoreText();
     }
 
-    void Update()
+    void Update()   
     {
         // Any updates if necessary
     }
