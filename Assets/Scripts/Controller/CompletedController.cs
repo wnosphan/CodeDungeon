@@ -1,19 +1,16 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CompletedController : MonoBehaviour
 {
-    //public Text completionText; // Reference to the UI Text element for displaying the completion message
-    [SerializeField] GameObject completeMenu;
-    [SerializeField] GameObject canVasInput;
-    [SerializeField] GameObject btnPause;
+    public Text completionText; // Reference to the UI Text element for displaying the completion message
+
     void Start()
     {
-        //if (completionText != null)
-        //{
-        //    completionText.gameObject.SetActive(false); // Hide the completion text at the start
-        //}
+        if (completionText != null)
+        {
+            completionText.gameObject.SetActive(false); // Hide the completion text at the start
+        }
     }
 
     void Update()
@@ -31,21 +28,13 @@ public class CompletedController : MonoBehaviour
 
     private void CompleteLevel()
     {
-        //if (completionText != null)
-        //{
-            btnPause.SetActive(false);
-            completeMenu.SetActive(true);
-            canVasInput.SetActive(false);
-            //completionText.gameObject.SetActive(true); // Show the completion text
-            //completionText.text = "Level Completed!"; // Set the completion message text
-        //}
+        if (completionText != null)
+        {
+            completionText.gameObject.SetActive(true); // Show the completion text
+            completionText.text = "Level Completed!"; // Set the completion message text
+        }
 
         Debug.Log("Level Completed!"); // Log completion message
         // Add any additional logic for level completion (e.g., stop player movement, load next level, etc.)
-    }
-    public void Home()
-    {
-        SceneManager.LoadScene("Main Menu");
-        Time.timeScale = 1;
     }
 }
