@@ -17,6 +17,14 @@ public class CharacterController: MonoBehaviour
     [SerializeField] private float moveSpeed = 1.0f; // Movement speed (units/second)
     [SerializeField] private float contactDistance = 0.1f; // Distance to check for collisions
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+        
+
     void Start()
     {
         if (player != null)
@@ -101,6 +109,10 @@ public class CharacterController: MonoBehaviour
             animator.SetBool("isMoving", true);
             animator.SetFloat("moveX", direction.x);
             animator.SetFloat("moveY", direction.y);
+
+            // Play the walk sound effect
+            audioManager.PlaySfx(audioManager.walkClip);
+
         }
 
         while (elapsedTime < totalDuration)
@@ -140,6 +152,9 @@ public class CharacterController: MonoBehaviour
         if (animator != null)
         {
             animator.SetBool("isMoving", false);
+
+            // Stop the walk sound effect
+            
         }
     }
 

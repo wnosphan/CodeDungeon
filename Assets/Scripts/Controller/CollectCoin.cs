@@ -6,11 +6,18 @@ public class CollectCoin : MonoBehaviour
     public Text scoreText; // Reference to the UI Text element for displaying the score
     private int score = 0; // Player's score
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     void Start()
     {
         UpdateScoreText();
     }
-
+        
     void Update()   
     {
         // Any updates if necessary
@@ -20,6 +27,7 @@ public class CollectCoin : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Coin"))
         {
+            audioManager.PlaySfx(audioManager.coinClip);
             Collect(collision.gameObject); // Collect the coin
         }
     }
