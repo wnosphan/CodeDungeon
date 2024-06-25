@@ -2327,6 +2327,7 @@ GameObject:
   - component: {fileID: 1054107283}
   - component: {fileID: 1054107284}
   - component: {fileID: 1054107285}
+  - component: {fileID: 1054107286}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Untagged
@@ -2547,6 +2548,20 @@ MonoBehaviour:
   completeScene: {fileID: 806019245}
   canVasInput: {fileID: 1985445702}
   pauseBtn: {fileID: 1199314513}
+--- !u!114 &1054107286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054107276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02dabf89a94e8b545bd0f2beec9b5d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1054107282}
+  smoothing: 5
 --- !u!1 &1084028595
 GameObject:
   m_ObjectHideFlags: 0
