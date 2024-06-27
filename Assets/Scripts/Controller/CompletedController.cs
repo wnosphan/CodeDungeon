@@ -9,6 +9,8 @@ public class CompletedController : MonoBehaviour
     [SerializeField] private Button pauseBtn; // Reference to the player GameObject
 
 
+
+
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
