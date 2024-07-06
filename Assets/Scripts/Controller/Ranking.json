@@ -1,0 +1,41 @@
+{
+  "levels": [
+    {
+      "level": "Level 1",
+      "scores": [
+        {
+          "rank": 1,
+          "name": "AAA",
+          "score": 100,
+          "time": "00:10:00"
+        },
+        {
+          "rank": 2,
+          "name": "BBB",
+          "score": 90,
+          "time": "00:12:00"
+        }
+        // Add more scores
+      ]
+    },
+    {
+      "level": "Level 2",
+      "scores": [
+        {
+          "rank": 1,
+          "name": "CCC",
+          "score": 95,
+          "time": "00:11:00"
+        },
+        {
+          "rank": 2,
+          "name": "DDD",
+          "score": 85,
+          "time": "00:13:00"
+        }
+        // Add more scores
+      ]
+    }
+    // Add more levels
+  ]
+}
