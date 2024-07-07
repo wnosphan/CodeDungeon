@@ -3200,6 +3200,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1054107282}
   smoothing: 5
+  initialZoom: 10
+  targetZoom: 5
+  zoomSpeed: 2
+  minZoom: 5
+  maxZoom: 15
+  runButton: {fileID: 414427383}
 --- !u!1 &1084028595
 GameObject:
   m_ObjectHideFlags: 0

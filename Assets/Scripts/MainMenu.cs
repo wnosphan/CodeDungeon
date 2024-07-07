@@ -15,4 +15,9 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("LevelMenu");
     }
 
+    public void RankingButton()
+    {
+        SceneManager.LoadScene("Ranking");
+    }
+
 }

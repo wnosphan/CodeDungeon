@@ -12,7 +12,6 @@ public class CameraFollow : MonoBehaviour
     public float minZoom = 5f; // Minimum zoom level
     public float maxZoom = 15f; // Maximum zoom level
     public Button runButton; // Reference to the run button
-
     private Camera cam; // Reference to the Camera component
     private bool isFollowing = false; // Flag to check if the camera should follow the player
     private bool isDragging = false; // Flag to check if the camera is being dragged
@@ -27,6 +26,7 @@ public class CameraFollow : MonoBehaviour
         cam = GetComponent<Camera>();
         if (cam == null)
         {
+
             Debug.LogError("Camera component missing on this game object. Please attach a Camera component.");
             return;
         }
