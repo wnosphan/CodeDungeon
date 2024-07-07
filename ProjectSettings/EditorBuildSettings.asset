@@ -12,19 +12,19 @@ EditorBuildSettings:
     path: Assets/Scenes/TestLevel.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
+    path: Assets/Scenes/Leveltest.unity
     guid: 0df25a24ac202a548a7880efbe1aade0
   - enabled: 1
-    path: Assets/Scenes/Level1.1.unity
+    path: Assets/Scenes/Level1.unity
     guid: ed740a2eb3d44954a98f8db4f8b53db0
   - enabled: 1
-    path: Assets/Scenes/Level1.2.unity
+    path: Assets/Scenes/Level2.unity
     guid: 99cb8e463f2e13446b7c91e8d7c5cb6f
   - enabled: 1
-    path: Assets/Scenes/Level2.unity
+    path: Assets/Scenes/Level3.1.unity
     guid: 147e8d2cca17a9b469284af6b61fb4e3
   - enabled: 1
-    path: Assets/Scenes/Level3.unity
+    path: Assets/Scenes/Level4.1.unity
     guid: e760d42932e2e8340aaa3085197c235a
   - enabled: 1
     path: Assets/Scenes/Ranking.unity

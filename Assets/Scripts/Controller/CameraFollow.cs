@@ -26,7 +26,6 @@ public class CameraFollow : MonoBehaviour
         cam = GetComponent<Camera>();
         if (cam == null)
         {
-
             Debug.LogError("Camera component missing on this game object. Please attach a Camera component.");
             return;
         }
@@ -41,6 +40,8 @@ public class CameraFollow : MonoBehaviour
         {
             lastTargetPosition = target.position; // Initialize the last target position
         }
+
+        Debug.Log("Camera initialized with orthographic size: " + cam.orthographicSize);
     }
 
     void LateUpdate()
@@ -113,6 +114,8 @@ public class CameraFollow : MonoBehaviour
             Debug.LogError("Target is not set. Please set the target in the inspector.");
             return;
         }
+
+        Debug.Log("Run button clicked. Starting to zoom in.");
 
         // Start the zoom in coroutine
         StartCoroutine(ZoomInCoroutine(targetZoom));
