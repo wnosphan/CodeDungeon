@@ -20,7 +20,7 @@ public class CompleteMenu : MonoBehaviour
         // Reload the active scene
         SceneManager.LoadScene(currentSceneName);
 
-        // Reset the time scale to normal
+        // Reset the time scale to normal   
         Time.timeScale = 1;
 
     }
