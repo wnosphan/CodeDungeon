@@ -15,18 +15,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Leveltest.unity
     guid: 0df25a24ac202a548a7880efbe1aade0
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
+    path: Assets/Scenes/Level 1.unity
     guid: ed740a2eb3d44954a98f8db4f8b53db0
   - enabled: 1
-    path: Assets/Scenes/Level2.unity
+    path: Assets/Scenes/Level 2.unity
     guid: 99cb8e463f2e13446b7c91e8d7c5cb6f
   - enabled: 1
-    path: Assets/Scenes/Level3.1.unity
+    path: Assets/Scenes/Level 3.unity
     guid: 147e8d2cca17a9b469284af6b61fb4e3
   - enabled: 1
-    path: Assets/Scenes/Level4.1.unity
+    path: Assets/Scenes/Level 4.unity
     guid: e760d42932e2e8340aaa3085197c235a
   - enabled: 1
     path: Assets/Scenes/Ranking.unity
     guid: fb6a829422071aa418cce97d6a5df22d
+  - enabled: 1
+    path: Assets/Scenes/RankingSave.unity
+    guid: a302c05ce84dc9244a86e913e65e4144
   m_configObjects: {}
