@@ -12,9 +12,16 @@ public class CompleteMenu : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    public void Resume()
+    public void Restart()
     {
-     
-      
+        // Get the active scene name
+        string currentSceneName = SceneManager.GetActiveScene().name;
+
+        // Reload the active scene
+        SceneManager.LoadScene(currentSceneName);
+
+        // Reset the time scale to normal
+        Time.timeScale = 1;
+
     }
 }

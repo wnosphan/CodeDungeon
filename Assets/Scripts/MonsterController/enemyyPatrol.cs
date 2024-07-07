@@ -21,35 +21,46 @@ public class enemyyPatrol : MonoBehaviour
 
     void Update()
     {
-       Vector2 point = currentPoint.position - transform.position;
-        if(currentPoint == pointB.transform)
-        {
-            rb.velocity = new Vector2(0, speed);
-        }
-        else
-        {
-            rb.velocity = new Vector2(0, -speed);
-        }
+        // Determine the direction to move
+        Vector2 direction = currentPoint.position - transform.position;
+        direction.Normalize();
 
-        if(Vector2.Distance(transform.position, currentPoint.position) < 0.1f && currentPoint == pointB.transform)
+        // Set the velocity based on the direction
+        rb.velocity = direction * speed;
+
+        // Update the animator parameters based on the direction
+        anim.SetFloat("moveX", direction.x);
+        anim.SetFloat("moveY", direction.y);        
+
+        // Check the distance to the current point
+        if (Vector2.Distance(transform.position, currentPoint.position) < 0.1f)
         {
-            
+            // Stop the enemy
+            rb.velocity = Vector2.zero;
+
+            // Switch the target point
+            if (currentPoint == pointB.transform)
+            {
                 currentPoint = pointA.transform;
-            
-        }
-        if (Vector2.Distance(transform.position, currentPoint.position) < 0.1f && currentPoint == pointA.transform)
-        {
-
-            currentPoint = pointB.transform;
-        }
+            }
+            else if (currentPoint == pointA.transform)
+            {
+                currentPoint = pointB.transform;
+            }
+        }   
+       
+      
     }
-
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawSphere(pointA.transform.position, 0.5f);
-        Gizmos.DrawSphere(pointB.transform.position, 0.5f);
-        Gizmos.DrawLine(pointA.transform.position, pointB.transform.position);
+        if (pointA != null && pointB != null)
+        {
+            Gizmos.DrawSphere(pointA.transform.position, 0.5f);
+            Gizmos.DrawSphere(pointB.transform.position, 0.5f);
+            Gizmos.DrawLine(pointA.transform.position, pointB.transform.position);
+        }
     }
 
+  
 }
