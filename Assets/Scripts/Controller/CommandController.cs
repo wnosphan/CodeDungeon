@@ -31,10 +31,11 @@ public class CommandController : MonoBehaviour
         {
             // Find the MonsterController component in the scene
             monsterController = FindObjectOfType<MonsterController>();
-            if (monsterController == null)
-            {
-                Debug.LogError("MonsterController component is not assigned and not found in the scene.");
-            }
+          
+            //if (monsterController == null)
+            //{
+            //    Debug.LogError("MonsterController component is not assigned and not found in the scene.");
+            //}
         }
 
         // Add listener for run button click
