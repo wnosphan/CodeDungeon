@@ -4,33 +4,34 @@ using UnityEngine;
 
 public class MonsterController : MonoBehaviour
 {
-    public Vector2 startPosition; // Starting position of the patrol
-    public Vector2 endPosition; // Ending position of the patrol
     public float moveSpeed = 3f; // Movement speed of the monster
     private Rigidbody2D rb; // Rigidbody2D component of the monster
-    private Vector2 currentTarget; // Current target position for the monster to move towards
+
+    public Transform player; // Reference to the player
+    public float chaseRange = 5f; // Range within which the monster starts chasing the player
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        currentTarget = endPosition; // Start by moving towards the end position
     }
 
     void Update()
     {
-        // Move towards the current target position
-        Vector2 currentPosition = rb.position;
-        Vector2 newPosition = Vector2.MoveTowards(currentPosition, currentTarget, moveSpeed * Time.deltaTime);
-        rb.MovePosition(newPosition);
+        // Check the distance between the monster and the player
+        float distanceToPlayer = Vector2.Distance(rb.position, player.position);
 
-        // Check if the monster has reached the current target position
-        if (Vector2.Distance(currentPosition, currentTarget) < 0.1f)
+        if (distanceToPlayer <= chaseRange)
         {
-            // Switch target position to create a patrol loop
-            if (currentTarget == startPosition)
-                currentTarget = endPosition;
-            else
-                currentTarget = startPosition;
+            // If the player is within the chase range, chase the player
+            ChasePlayer();
         }
+    }
+
+    void ChasePlayer()
+    {
+        Vector2 currentPosition = rb.position;
+        Vector2 targetPosition = player.position;
+        Vector2 newPosition = Vector2.MoveTowards(currentPosition, targetPosition, moveSpeed * Time.deltaTime);
+        rb.MovePosition(newPosition);
     }
 }
