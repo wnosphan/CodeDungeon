@@ -4592,8 +4592,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   commandInputField: {fileID: 1850880584}
   runButton: {fileID: 872961305}
-  characterController: {fileID: 1054107283}
-  monsterController: {fileID: 1162948462}
 --- !u!95 &1054107280
 Animator:
   serializedVersion: 5
@@ -5314,9 +5312,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3789791af1f11c147a7f5fd0bd859c37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 27
   player: {fileID: 1054107282}
-  chaseRange: 15
+  chaseRange: 12
   solidObjectLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -29374,7 +29372,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15.875723
+  orthographic size: 16
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
