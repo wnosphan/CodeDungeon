@@ -8,10 +8,11 @@ public class CameraFollow : MonoBehaviour
     public float smoothing = 5f; // Smoothing factor for camera movement
     public float initialZoom = 10f; // Initial zoom level
     public float targetZoom = 5f; // Target zoom level
-    public float zoomSpeed = 8f; // Speed of zooming in/out
+    public float zoomSpeed = 2f; // Speed of zooming in/out
     public float minZoom = 5f; // Minimum zoom level
     public float maxZoom = 15f; // Maximum zoom level
     public Button runButton; // Reference to the run button
+
     private Camera cam; // Reference to the Camera component
     private bool isFollowing = false; // Flag to check if the camera should follow the player
     private bool isDragging = false; // Flag to check if the camera is being dragged
@@ -30,6 +31,13 @@ public class CameraFollow : MonoBehaviour
             return;
         }
 
+        // Check if runButton is assigned
+        if (runButton == null)
+        {
+            Debug.LogError("Run Button is not assigned. Please assign it in the Inspector.");
+            return;
+        }
+
         // Add listener to the button
         runButton.onClick.AddListener(OnRunButtonClicked);
 
@@ -40,8 +48,10 @@ public class CameraFollow : MonoBehaviour
         {
             lastTargetPosition = target.position; // Initialize the last target position
         }
-
-        Debug.Log("Camera initialized with orthographic size: " + cam.orthographicSize);
+        else
+        {
+            Debug.LogError("Target is not set. Please set the target in the Inspector.");
+        }
     }
 
     void LateUpdate()
@@ -114,8 +124,6 @@ public class CameraFollow : MonoBehaviour
             Debug.LogError("Target is not set. Please set the target in the inspector.");
             return;
         }
-
-        Debug.Log("Run button clicked. Starting to zoom in.");
 
         // Start the zoom in coroutine
         StartCoroutine(ZoomInCoroutine(targetZoom));
