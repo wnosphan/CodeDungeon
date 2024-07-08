@@ -4592,8 +4592,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   commandInputField: {fileID: 1850880584}
   runButton: {fileID: 872961305}
-  characterController: {fileID: 0}
-  monsterController: {fileID: 0}
+  characterController: {fileID: 1054107283}
+  monsterController: {fileID: 1162948462}
 --- !u!95 &1054107280
 Animator:
   serializedVersion: 5

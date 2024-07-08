@@ -13,8 +13,8 @@ public class CommandController : MonoBehaviour
     //public TMP_InputField commandInputField;
     public InputField commandInputField; // Input field for entering commands
     public Button runButton; // Reference to the run button
-    public CharacterController characterController; // Reference to the CharacterController component
-    public MonsterController monsterController; // Reference to the MonsterController component
+    private CharacterController characterController; // Reference to the CharacterController component
+    private MonsterController monsterController ; // Reference to the MonsterController component
 
     void Start()
     {

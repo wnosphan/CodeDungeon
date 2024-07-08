@@ -8,7 +8,7 @@ public class CameraFollow : MonoBehaviour
     public float smoothing = 5f; // Smoothing factor for camera movement
     public float initialZoom = 10f; // Initial zoom level
     public float targetZoom = 5f; // Target zoom level
-    public float zoomSpeed = 2f; // Speed of zooming in/out
+    public float zoomSpeed = 8f; // Speed of zooming in/out
     public float minZoom = 5f; // Minimum zoom level
     public float maxZoom = 15f; // Maximum zoom level
     public Button runButton; // Reference to the run button
