@@ -740,37 +740,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &175105999
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 175106000}
-  m_Layer: 0
-  m_Name: PointA
-  m_TagString: Untagged
-  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &175106000
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 175105999}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.56, y: -8.4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 645690108}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &235484249
 GameObject:
   m_ObjectHideFlags: 0
@@ -2818,8 +2787,6 @@ Transform:
   - {fileID: 1176390578}
   - {fileID: 636839581}
   - {fileID: 1162948456}
-  - {fileID: 175106000}
-  - {fileID: 1913260602}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &651267339
@@ -4625,6 +4592,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   commandInputField: {fileID: 1850880584}
   runButton: {fileID: 872961305}
+  characterController: {fileID: 0}
+  monsterController: {fileID: 0}
 --- !u!95 &1054107280
 Animator:
   serializedVersion: 5
@@ -5282,8 +5251,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.18166289}
-  m_Size: {x: 1, y: 1}
+  m_Offset: {x: 0, y: -0.049755417}
+  m_Size: {x: 1, y: 1.2638214}
   m_Direction: 0
 --- !u!50 &1162948460
 Rigidbody2D:
@@ -5300,7 +5269,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -5340,14 +5309,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1162948455}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe94cca9182520944b98b285d9c933ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 3789791af1f11c147a7f5fd0bd859c37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointA: {fileID: 175105999}
-  pointB: {fileID: 1913260601}
-  speed: 3
+  moveSpeed: 10
+  player: {fileID: 1054107282}
+  chaseRange: 15
+  solidObjectLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  contactDistance: 0.1
 --- !u!1 &1176390577
 GameObject:
   m_ObjectHideFlags: 0
@@ -10468,37 +10441,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1907277922}
   m_CullTransparentMesh: 1
---- !u!1 &1913260601
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1913260602}
-  m_Layer: 0
-  m_Name: PointB
-  m_TagString: Untagged
-  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1913260602
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1913260601}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.54, y: -8.38, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 645690108}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1926144436
 GameObject:
   m_ObjectHideFlags: 0
@@ -29479,7 +29421,7 @@ MonoBehaviour:
   smoothing: 5
   initialZoom: 10
   targetZoom: 5
-  zoomSpeed: 2
+  zoomSpeed: 10
   minZoom: 5
   maxZoom: 15
   runButton: {fileID: 872961305}

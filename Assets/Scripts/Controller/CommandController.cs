@@ -13,16 +13,32 @@ public class CommandController : MonoBehaviour
     //public TMP_InputField commandInputField;
     public InputField commandInputField; // Input field for entering commands
     public Button runButton; // Reference to the run button
-    private CharacterController characterController; // Reference to the CharacterController component
+    public CharacterController characterController; // Reference to the CharacterController component
+    public MonsterController monsterController; // Reference to the MonsterController component
 
-   
     void Start()
     {
-        characterController = GetComponent<CharacterController>();
-        //commandInputField.onEndEdit.AddListener(OnCommandEntered); // Add listener for command input
-        runButton.onClick.AddListener(OnRunButtonClicked); // Add listener for run button click
+        if (characterController == null)
+        {
+            characterController = GetComponent<CharacterController>();
+            if (characterController == null)
+            {
+                Debug.LogError("CharacterController component is not assigned and not found on the same GameObject.");
+            }
+        }
 
+        if (monsterController == null)
+        {
+            // Find the MonsterController component in the scene
+            monsterController = FindObjectOfType<MonsterController>();
+            if (monsterController == null)
+            {
+                Debug.LogError("MonsterController component is not assigned and not found in the scene.");
+            }
+        }
 
+        // Add listener for run button click
+        runButton.onClick.AddListener(OnRunButtonClicked);
     }
 
     public void OnRunButtonClicked()
@@ -39,19 +55,30 @@ public class CommandController : MonoBehaviour
         if (!string.IsNullOrWhiteSpace(value))
         {
             // Reset player position to starting position
-            characterController.ResetPlayerPosition();
+            if (characterController != null)
+            {
+                characterController.ResetPlayerPosition();
+            }
+
+            if (monsterController != null)
+            {
+                monsterController.ResetPosition();
+            }
 
             // Split the commands by new lines
             string[] commands = value.Split(new[] { '\n' }, System.StringSplitOptions.RemoveEmptyEntries);
 
             foreach (string command in commands)
             {
-                characterController.EnqueueCommand(command.Trim()); // Add each command to the queue
+                if (characterController != null)
+                {
+                    characterController.EnqueueCommand(command.Trim()); // Add each command to the queue
+                }
             }
 
             commandInputField.ActivateInputField(); // Focus back to input field
 
-            if (!characterController.IsProcessingCommands())
+            if (characterController != null && !characterController.IsProcessingCommands())
             {
                 StartCoroutine(characterController.ProcessCommands()); // Start processing commands if not already doing so
             }

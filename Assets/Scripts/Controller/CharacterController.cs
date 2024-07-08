@@ -6,6 +6,7 @@ using UnityEngine;
 public class CharacterController: MonoBehaviour
 {
     public GameObject player; // Reference to the player GameObject
+   
     public LayerMask solidObjectLayer; // Layer mask for solid objects
     public LayerMask outDoorLayer; // Layer mask for doors
     private Queue<string> commandQueue = new Queue<string>(); // Queue to store commands
@@ -201,6 +202,7 @@ public class CharacterController: MonoBehaviour
     public void ResetPlayerPosition()
     {
         player.transform.position = startPoint;
+      
     }
 
     public bool IsProcessingCommands()

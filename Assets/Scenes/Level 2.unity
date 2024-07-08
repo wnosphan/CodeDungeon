@@ -2718,7 +2718,6 @@ GameObject:
   - component: {fileID: 648594545}
   - component: {fileID: 648594544}
   - component: {fileID: 648594543}
-  - component: {fileID: 648594548}
   m_Layer: 0
   m_Name: Monster2
   m_TagString: Untagged
@@ -2891,21 +2890,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &648594548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 648594541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3789791af1f11c147a7f5fd0bd859c37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 7
-  player: {fileID: 1054107282}
-  chaseRange: 7
 --- !u!1 &651267339
 GameObject:
   m_ObjectHideFlags: 0
@@ -5291,7 +5275,6 @@ GameObject:
   - component: {fileID: 1162948460}
   - component: {fileID: 1162948461}
   - component: {fileID: 1162948462}
-  - component: {fileID: 1162948463}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Monster
@@ -5456,7 +5439,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1162948455}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe94cca9182520944b98b285d9c933ee, type: 3}
   m_Name: 
@@ -5464,21 +5447,6 @@ MonoBehaviour:
   pointA: {fileID: 175105999}
   pointB: {fileID: 1913260601}
   speed: 3
---- !u!114 &1162948463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1162948455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3789791af1f11c147a7f5fd0bd859c37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 7
-  player: {fileID: 1054107282}
-  chaseRange: 7
 --- !u!1 &1176390577
 GameObject:
   m_ObjectHideFlags: 0
@@ -9720,10 +9688,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_FontSize: 20
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -9731,7 +9699,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Save
 --- !u!222 &1692830753
 CanvasRenderer:
   m_ObjectHideFlags: 0
