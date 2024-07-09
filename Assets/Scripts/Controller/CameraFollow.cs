@@ -20,6 +20,7 @@ public class CameraFollow : MonoBehaviour
     private Vector3 lastTargetPosition; // Last position of the target
     private float timeSinceLastMove = 0f; // Time since the target last moved
     private float stopThreshold = 0.1f; // Threshold to consider the target as stopped (in seconds)
+    private bool isZoomedIn = false; // Flag to check if the camera has zoomed in
 
     void Start()
     {
@@ -47,6 +48,7 @@ public class CameraFollow : MonoBehaviour
         if (target != null)
         {
             lastTargetPosition = target.position; // Initialize the last target position
+            StartCoroutine(ZoomInCoroutine(targetZoom)); // Start zooming in immediately
         }
         else
         {
@@ -106,15 +108,13 @@ public class CameraFollow : MonoBehaviour
 
     private IEnumerator ZoomInCoroutine(float targetZoom)
     {
-        while (cam.orthographicSize > targetZoom)
+        while (Mathf.Abs(cam.orthographicSize - targetZoom) > 0.1f)
         {
-            cam.orthographicSize -= zoomSpeed * Time.deltaTime;
-            if (cam.orthographicSize < targetZoom)
-            {
-                cam.orthographicSize = targetZoom;
-            }
+            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, targetZoom, zoomSpeed * Time.deltaTime);
             yield return null;
         }
+        cam.orthographicSize = targetZoom;
+        isZoomedIn = true; // Set the flag to indicate zoom is complete
     }
 
     private void OnRunButtonClicked()
@@ -125,10 +125,21 @@ public class CameraFollow : MonoBehaviour
             return;
         }
 
-        // Start the zoom in coroutine
-        StartCoroutine(ZoomInCoroutine(targetZoom));
+        if (isZoomedIn)
+        {
+            // Start following the player
+            isFollowing = true;
+        }
+        else
+        {
+            // Start the zoom in coroutine and follow the player
+            StartCoroutine(ZoomAndFollow());
+        }
+    }
 
-        // Start following the player
+    private IEnumerator ZoomAndFollow()
+    {
+        yield return StartCoroutine(ZoomInCoroutine(targetZoom));
         isFollowing = true;
     }
 
